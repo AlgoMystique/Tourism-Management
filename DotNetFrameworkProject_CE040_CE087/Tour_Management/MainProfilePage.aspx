@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Group Details</title>
     <style>
          ul {
   list-style-type: none;
@@ -100,35 +100,81 @@ li a:hover:not(.active) {
              vertical-align:central;
 
         }
-     
-</style>
+        /* Added styles for the group details table */
+        .group-details {
+            margin: 40px auto;
+            width: 80%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        .group-details th, .group-details td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        .group-details th {
+            background-color: #04AA6D;
+            color: white;
+        }
+        .group-details tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
     <ul class="nav navbar-nav navbar-left" >
-                <li><a href="usercrud.aspx"><span class="glyphicons glyphicons-home"></span>Profile</a></li>
-                <li><a href="DisplayTours.aspx">Tours</a></li>    
-                 <li><a href="Order.aspx">Book Tour</a></li> 
-                  <li><a href="mybooking.aspx">Bookings info</a></li>
-                
-                
-            </ul>
+        <li><a href="usercrud.aspx"><span class="glyphicons glyphicons-home"></span>Profile</a></li>
+        <li><a href="DisplayTours.aspx">Tours</a></li>    
+        <li><a href="Order.aspx">Book Tour</a></li> 
+        <li><a href="mybooking.aspx">Bookings info</a></li>
+    </ul>
         
     <div class="welcome" style="text-align:center">
         <asp:Label ID="Label1" runat="server" ></asp:Label>
     </div>
+
+    <!-- Student Group Details Section -->
+    <h2 style="text-align:center;">Student Group Details</h2>
+    <table class="group-details" >
+        <thead>
+            <tr>
+                <th>Student Full Name</th>
+                <th>Student ID</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Abel Kibet KIGEN</td>
+                <td>20022730</td>
+                <td>20022730@students.koi.edu.au</td>
+            </tr>
+            <tr>
+                <td>Sagar DEVKOTA</td>
+                <td>20028338</td>
+                <td>20028338@students.koi.edu.au</td>
+            </tr>
+            <tr>
+                <td>Bimal PARAJULI</td>
+                <td>20028423</td>
+                <td>20028423@students.koi.edu.au</td>
+            </tr>
+            <tr>
+                <td>Sababa TASNIM </td>
+                <td>20028086</td>
+                <td>20028086@students.koi.edu.au</td>
+            </tr>
+        </tbody>
+    </table>
+
     <div class="tour">    
-                    <h2>
-              <br/> <br/> <br/>
-                <a href="DisplayTours.aspx" class="btn btn-primary" style="width:300px; height:50px ; font-size:x-large;">Explore the Tours!</a><br/><br/><br/>
-                <p class="label-info">
-                    Find the best tour packages without any hustle.<br/>
-                    Book and pack your lugguage.
-                </p>
-            </h2>
-        
+        <h2>
+            <br/> <br/> <br/>
+            <a href="DisplayTours.aspx" class="btn btn-primary" style="width:300px; height:50px ; font-size:x-large;">Explore the Tours!</a><br/><br/><br/>
+            <p class="label-info">
+                Find the best tour packages without any hustle.<br/>
+                Book and pack your lugguage.
+            </p>
+        </h2>
     </div>
-   
-
-
 </body>
 </html>
